@@ -19,7 +19,7 @@ void display(circularQ LIST){
 	if(!isEmpty(LIST)){
 		
 		int i;
-		for(i = LIST.front; i <= LIST.rear; i++){
+		for(i = LIST.front; i != (LIST.rear + 1) % MAX; i = (i + 1) % MAX){
 			printf(" %d ", LIST.data[i]);
 		}
 		printf("    :REAR");
